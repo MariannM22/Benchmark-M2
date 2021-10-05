@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+{%for girl_names, girl_content in GHOULS.items%}
+{%if peeps in girl_names%}
+<h1>{{girl_content.name}}</h1>
+<p>{{girl_content.description}}</p>
+<p>{{girl_content.parents}}</p>
+{% endif %}
+{% endfor %}
+<a href = "{% url "home"%}">HOME</a> 
+
+{%endblock content%}

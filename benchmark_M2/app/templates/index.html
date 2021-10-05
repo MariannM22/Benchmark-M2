@@ -1,0 +1,14 @@
+
+{%extends "base.html"%}
+{%block content%}
+
+<h3>We've got spirit! How bout you?</h2>
+<h1>Welcome to Monster High where all the ghoul kids rule!</h1>
+<h2>Meet our favorite Ghouls.</h2>
+{%for x in GHOULS.keys%}
+        <ul>
+            <li><a href="{% url "others" x%}">{{x}}<a/></li>
+        </ul>
+
+         {% endfor %}
+{% endblock content %}
